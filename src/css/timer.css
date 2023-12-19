@@ -1,0 +1,17 @@
+.section__timer{
+    margin-top: 36px;
+    margin-left: 156px;
+}
+.timer{
+    display: flex;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+}
+
+.field + .field{
+    margin-left: 24px;
+}
+
