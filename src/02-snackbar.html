@@ -8,12 +8,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <title>Page 2</title>
+    <title>Snackbar - Promise</title>
   </head>
   <body>
+    <a href="./index.html">Go to home</a>
     <section>
-      <a href="./index.html">Go to home</a>
-
+      <form class="form">
+        <label>
+          Delay (ms)
+          <input class="input__delay" type="number" name="delay" value="55" required />
+        </label>
+        <fieldset>
+        <legend>State</legend>
+        <label>
+         <input class="input__fulfilled" type="radio" name="state" value="fulfilled" required />
+         Fulfilled
+        </label>
+         <label>
+         <input class="input__rejected" type="radio" name="state" value="rejected" required />
+         Rejected
+        </label>
+        </fieldset>
+        <button type="submit">Create notification</button>
+      </form>
     </section>
     <script type="module" src="/js/02-snackbar.js"></script>
   </body>
