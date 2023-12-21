@@ -2,6 +2,7 @@
     margin-top: 36px;
     margin-left: 156px;
 }
+
 .timer{
     display: flex;
     margin-top: 32px;
@@ -24,7 +25,6 @@
     width: 75px;
     border-radius: 8px;
     border-color: transparent;
-    /* border-color: ; */
     margin-left: 8px;
 }
 .section__timer button{
@@ -39,7 +39,7 @@
     background-color:#CFCFCF;
 }
 
-.section__timer button:hover{
+.section__timer button:hover:enabled{
     background-color: #6C8CFF;
 }
 
@@ -70,8 +70,4 @@
 .value{
     font-size: 40px;
     padding: 5px;
-}
-
-.label{
-    
 }

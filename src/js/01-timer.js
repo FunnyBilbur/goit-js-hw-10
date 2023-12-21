@@ -37,16 +37,16 @@ const options = {
                 progressBarColor: '#B51B1B'
             });
         }
-        clearInterval(intervalId);
         days.innerText = "00";
         hours.innerText = "00";
         minutes.innerText = "00";
         seconds.innerText = "00";
+        clearInterval(intervalId);
     },
 };
 
 const myInput = document.querySelector("#datetime-picker");
-const fp = flatpickr(myInput, options);  // flatpickr
+flatpickr(myInput, options);  // flatpickr
 
 BtnStart.addEventListener('click', () => {
     intervalId = setInterval(() => {
@@ -62,6 +62,7 @@ BtnStart.addEventListener('click', () => {
             clearInterval(intervalId);
         }
     }, 1000);
+    BtnStart.disabled = true;
 });
 
 function convertMs(ms) {
