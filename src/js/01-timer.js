@@ -1,5 +1,9 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
+import iziToast from "izitoast";
+import "iziToast/dist/css/iziToast.min.css";
+import "iziToast/dist/js/iziToast.min.js";
+
 
 const BtnStart = document.querySelector('button');
 const days = document.querySelector('span[data-days]');
@@ -23,11 +27,22 @@ const options = {
         }
         else {
             BtnStart.disabled = true;
-            window.alert('Please choose a date in the future');
+            iziToast.show({
+                title: 'Error',
+                titleColor: 'white',
+                position: 'topRight',
+                message: 'Please choose a date in the future',
+                messageColor: 'white',
+                backgroundColor: '#EF4040',
+                progressBarColor: '#B51B1B'
+            });
         }
         clearInterval(intervalId);
+        days.innerText = "00";
+        hours.innerText = "00";
+        minutes.innerText = "00";
+        seconds.innerText = "00";
     },
-
 };
 
 const myInput = document.querySelector("#datetime-picker");
