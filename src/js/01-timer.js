@@ -1,9 +1,6 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import iziToast from "izitoast";
-import "iziToast/dist/css/iziToast.min.css";
-import "iziToast/dist/js/iziToast.min.js";
-
 
 const BtnStart = document.querySelector('button');
 const days = document.querySelector('span[data-days]');

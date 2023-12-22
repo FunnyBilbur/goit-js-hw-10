@@ -1,13 +1,7 @@
 import iziToast from "izitoast";
-import "iziToast/dist/css/iziToast.min.css";
-import "iziToast/dist/js/iziToast.min.js";
-
 const form = document.querySelector('.form');
 const input_delay = document.querySelector('.input__delay');
 const input_fulfilled = document.querySelector('.input__fulfilled');
-const input_rejected = document.querySelector('.input__rejected');
-
-
 
 form.addEventListener('submit', (arg) => {
     arg.preventDefault();
@@ -17,7 +11,6 @@ form.addEventListener('submit', (arg) => {
         makePromise({ shouldResolve: true, delay: delay_ms })
             .then(result => console.log(result))
             .catch(error => console.error(error));
-
     } else {
         makePromise({ shouldResolve: false, delay: delay_ms })
             .then(result => console.log(result))
