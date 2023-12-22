@@ -5,17 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <title>Page 2</title>
-    <script type="module" crossorigin src="/goit-js-hw-10/assets/modulepreload-polyfill-ec808ebb.js"></script>
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-ecb3bbf9.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
+    <title>Snackbar</title>
+    <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-ec808ebb.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-c2cf587c.js">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-f90250d9.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/02-snackbar-43424520.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-47a513bd.css">
   </head>
   <body>
+    <a href="./index.html">Go to home</a>
     <section>
-      <a href="./index.html">Go to home</a>
-
+      <form class="form">
+        <label>
+          Delay (ms)
+          <input class="input__delay" type="number" name="delay" value="55" required />
+        </label>
+        <fieldset class="fieldset">
+        <legend>State</legend>
+        <label class="state_label">
+         <input class="input__fulfilled" type="radio" name="state" value="fulfilled" required />
+         Fulfilled
+        </label>
+         <label class="state_label">
+         <input class="input__rejected" type="radio" name="state" value="rejected" required />
+         Rejected
+        </label>
+        </fieldset>
+        <button class="submit__button" type="submit">Create notification</button>
+      </form>
     </section>
     
   </body>
